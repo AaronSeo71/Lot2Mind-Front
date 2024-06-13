@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Upload Image/Text and Get SHA256 Hash</title>
+    <title>Lotto is your mind</title>
 </head>
+
 <body>
-    <h1>Upload Image/Text and Get SHA256 Hash</h1>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+    <!-- Image upload -->
+    <div class="avatar-upload">
+
+        <div class="avatar-edit">
+            <input type='file' id="imageUpload" class="image/*" style="display:none" onchange="handleImage(this)" onclick="this.value=null;"/>
+            <label for="imageUpload" class="label-image-upload">
+                <i id="camera" class="fas fa-camera"></i>
+            </label>
+            <button style="display: none;" id="inputText" onclick="inputText()">Input Text</button>
+            <label for="inputText" class="label-txt-input">
+                <i id="txt-input" class="fas fa-keyboard"></i>
+            </label>
+            <button style="display: none;" id="saveText" onclick="saveText()">Save Text</button>
+            <label for="saveText" class="label-txt-save">
+                <i id="txt-save" class="fas fa-save"></i>
+            </label>
+        </div>
+        <div id="imageUploadSection">
+            <div class="avatar-preview">
+                <div id="imagePreview" style="background-image: url(./img/relaxlife.jpeg);">
+                </div>
+            </div>
+        </div>
+        <div id="textUploadSection">
+            <textarea id="textInput" rows="14" cols="47"></textarea>
+        </div>
+        <div id="data-container" class="nums"> </div>
+    </div>
+    <div id="hash"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 Aaron Seo</p>
+    </footer>
+
+    <!-- <h1>Upload Image/Text and Get SHA256 Hash</h1>
     <button id="toggle" onclick="toggleUploadSection()">글쓰기</button>
     <input style="display: block;" type="file" id="imageInput" onchange="handleImage()">
     <button style="display: none;" id="uploadText" onclick="uploadText()">Upload Text</button>
@@ -23,9 +63,9 @@
         <textarea id="textInput" rows="4" cols="50"></textarea>
         <div id="textPreview"></div>
         <div id="textHash"></div>
-    </div>
+    </div> -->
 
-   <!--  <h2>Upload Image</h2>
+    <!--  <h2>Upload Image</h2>
     <input type="file" id="imageInput" onchange="handleImage()">
     <button onclick="previewImage()">Preview Image</button>
     <div id="imagePreview"></div>
@@ -41,4 +81,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
