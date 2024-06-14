@@ -16,7 +16,8 @@
     <div class="avatar-upload">
 
         <div class="avatar-edit">
-            <input type='file' id="imageUpload" class="image/*" style="display:none" onchange="handleImage(this)" onclick="this.value=null;"/>
+            <input type='file' id="imageUpload" class="image/*" style="display:none" onchange="handleImage(this)"
+                onclick="this.value=null;" />
             <label for="imageUpload" class="label-image-upload">
                 <i id="camera" class="fas fa-camera"></i>
             </label>
@@ -36,7 +37,9 @@
             </div>
         </div>
         <div id="textUploadSection">
-            <textarea id="textInput" rows="14" cols="47"></textarea>
+            <div class="avatar-preview">
+                <textarea id="textInput" placeholder="Please type your mind.&#10;자신의 마음을 적어주세요." ></textarea>
+            </div>
         </div>
         <div id="data-container" class="nums"> </div>
     </div>
@@ -46,40 +49,6 @@
     <footer>
         <p>&copy; 2024 Aaron Seo</p>
     </footer>
-
-    <!-- <h1>Upload Image/Text and Get SHA256 Hash</h1>
-    <button id="toggle" onclick="toggleUploadSection()">글쓰기</button>
-    <input style="display: block;" type="file" id="imageInput" onchange="handleImage()">
-    <button style="display: none;" id="uploadText" onclick="uploadText()">Upload Text</button>
-
-    <div id="imageUploadSection">
-        <h2>Upload Image</h2>
-        <div id="imagePreview"></div>
-        <div id="imageHash"></div>
-    </div>
-
-    <div id="textUploadSection">
-        <h2>Upload Text</h2>
-        <textarea id="textInput" rows="4" cols="50"></textarea>
-        <div id="textPreview"></div>
-        <div id="textHash"></div>
-    </div> -->
-
-    <!--  <h2>Upload Image</h2>
-    <input type="file" id="imageInput" onchange="handleImage()">
-    <button onclick="previewImage()">Preview Image</button>
-    <div id="imagePreview"></div>
-    <button onclick="uploadImage()" style="display: none;" id="uploadImageButton">Upload Image</button>
-    <div id="imageHash"></div>
-
-    <h2>Upload Text</h2>
-    <textarea id="textInput" rows="4" cols="50"></textarea>
-    <br>
-    <button onclick="uploadText()">Upload Text</button>
-    <div id="textPreview"></div>
-    <div id="textHash"></div> -->
-
-    <script src="script.js"></script>
 </body>
 
 </html>
