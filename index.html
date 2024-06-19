@@ -9,6 +9,39 @@
 </head>
 
 <body>
+    <input type="checkbox" id="check_box" />
+    <label for="check_box">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <div id="side_menu">
+        <ul>
+            <li><a href="#openAbout">About</a></li>
+            <li><a href="#openCopyright">Copyright</a></li>
+        </ul>
+    </div>
+    <div id="openAbout" class="overlay" >
+        <div class="popup">
+            <h2>사용설명</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <p>사진이나 글을 입력하면,</br>
+                로또번호를 생성해 드립니다.</p>
+            </div>
+        </div>
+    </div>
+    <div id="openCopyright" class="overlay" >
+        <div class="popup">
+            <h2>저작권</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <p>저작권은 프리입니다.</br>
+                마음대로 사용하시고 링크만 남겨주세요.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 
@@ -38,7 +71,7 @@
         </div>
         <div id="textUploadSection">
             <div class="avatar-preview">
-                <textarea id="textInput" placeholder="Please type your mind.&#10;자신의 마음을 적어주세요." ></textarea>
+                <textarea id="textInput" placeholder="Please type your mind.&#10;자신의 마음을 적어주세요."></textarea>
             </div>
         </div>
         <div id="data-container" class="nums"> </div>
