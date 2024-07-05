@@ -123,13 +123,14 @@ function handleImage() {
             $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
             $('#imagePreview').hide();
             $('#imagePreview').fadeIn(650);
+            const hash = extractNumbers(e.target.result);
+            displayData(hash);
         };
         reader.readAsDataURL(imageFile);
-
-        const formData = new FormData();
-        formData.append('image', imageFile);
-        const hash = extractNumbers(formData);
-        displayData(hash);
+        //const formData = new FormData();
+        //formData.append('image', imageFile);
+        //const hash = extractNumbers(text);
+        //displayData(hash);
     }
 }
 
